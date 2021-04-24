@@ -2,8 +2,11 @@
   "name": "boos",
   "version": "1.0.0",
   "description": "Simple state management library, which make use of a observer object alonside with React to share state between components",
-  "main": "package.json",
+  "main": "./dist",
+  "module": "./lib-esm",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc && tsc --build tsconfig.esm.json",
     "test": "test"
   },
   "repository": {
@@ -30,6 +33,7 @@
     "immer": "^9.0.1"
   },
   "devDependencies": {
+    "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.25.0",
