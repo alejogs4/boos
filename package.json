@@ -1,0 +1,44 @@
+{
+  "name": "boos",
+  "version": "1.0.0",
+  "description": "Simple state management library, which make use of a observer object alonside with React to share state between components",
+  "main": "package.json",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejogs4/boos.git"
+  },
+  "keywords": [
+    "StateManagement",
+    "Javascript",
+    "React",
+    "ObserverPattern",
+    "Hooks"
+  ],
+  "author": "Alejandro García Serna <alejogs4@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejogs4/boos/issues"
+  },
+  "homepage": "https://github.com/alejogs4/boos#readme",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "immer": "^9.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "react": "^17.0.2",
+    "typescript": "^4.2.4"
+  }
+}
