@@ -26,6 +26,17 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
+  overrides: [
+    {
+      files: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
   rules: {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
