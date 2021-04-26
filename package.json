@@ -75,15 +75,5 @@
     "transform": {
       "^.+\\.ts?$": "ts-jest"
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run test"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "npm run lint"
-    ]
   }
 }
