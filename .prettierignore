@@ -1,0 +1,7 @@
+# Build artifacts
+dist/
+lib-esm/
+coverage/
+
+# node modules
+node_modules/
