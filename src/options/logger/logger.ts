@@ -6,11 +6,7 @@ export interface LoggerOptions<T> {
   tag: string;
 }
 
-export function logValueChanges<T>(
-  options: LoggerOptions<T> | undefined,
-  oldValue: T,
-  newValue: T,
-) {
+export function logValueChanges<T>(options: LoggerOptions<T> | undefined, oldValue: T, newValue: T) {
   if (options && options.active) {
     if (typeof options.active === 'boolean' || options.active(oldValue)) {
       console.group(`%cOld ${options.tag} boos value`, 'color:tomato;');

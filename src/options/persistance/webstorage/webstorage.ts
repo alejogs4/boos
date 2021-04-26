@@ -6,11 +6,7 @@ interface WebstorageParameters<T> {
   initialValue: T;
 }
 
-export function buildWebstorage<T>({
-  storage,
-  initialValue,
-  key,
-}: WebstorageParameters<T>): Persistance<T> {
+export function buildWebstorage<T>({ storage, initialValue, key }: WebstorageParameters<T>): Persistance<T> {
   return {
     getItem() {
       const storedValue = storage.getItem(key);

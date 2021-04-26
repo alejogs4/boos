@@ -1,8 +1,6 @@
 import produce from 'immer';
 import { Boos, ValueModifier, Subscriber } from './boos';
-import {
-  buildInMemoryPersistance, PersistanceBuilder, LoggerOptions, logValueChanges,
-} from './options';
+import { buildInMemoryPersistance, PersistanceBuilder, LoggerOptions, logValueChanges } from './options';
 
 interface BoosOptions<T> {
   persistanceBuilder?: PersistanceBuilder<T>;

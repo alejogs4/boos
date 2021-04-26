@@ -14,25 +14,46 @@ describe('boosUpdate tests', () => {
     const testsCases = [
       // Expected to change
       {
-        name: 'Should return true if both values are of different type', valueOne: 1, valueTwo: '1', expected: true,
+        name: 'Should return true if both values are of different type',
+        valueOne: 1,
+        valueTwo: '1',
+        expected: true,
       },
       {
-        name: 'Should return true if both numbers are different', valueOne: 1, valueTwo: 2, expected: true,
+        name: 'Should return true if both numbers are different',
+        valueOne: 1,
+        valueTwo: 2,
+        expected: true,
       },
       {
-        name: 'Should return true if both booleans are different', valueOne: true, valueTwo: false, expected: true,
+        name: 'Should return true if both booleans are different',
+        valueOne: true,
+        valueTwo: false,
+        expected: true,
       },
       {
-        name: 'Should return true if both strings are different', valueOne: 'value one', valueTwo: 'value two', expected: true,
+        name: 'Should return true if both strings are different',
+        valueOne: 'value one',
+        valueTwo: 'value two',
+        expected: true,
       },
       {
-        name: 'Should return true if both objects are different', valueOne: { a: 1 }, valueTwo: { a: 2 }, expected: true,
+        name: 'Should return true if both objects are different',
+        valueOne: { a: 1 },
+        valueTwo: { a: 2 },
+        expected: true,
       },
       {
-        name: 'Should return true if both objects are different shape', valueOne: { a: 1, c: 3 }, valueTwo: { a: 1, b: 4 }, expected: true,
+        name: 'Should return true if both objects are different shape',
+        valueOne: { a: 1, c: 3 },
+        valueTwo: { a: 1, b: 4 },
+        expected: true,
       },
       {
-        name: 'Should return true if both objects properties are different types', valueOne: { a: 1 }, valueTwo: { a: '1' }, expected: true,
+        name: 'Should return true if both objects properties are different types',
+        valueOne: { a: 1 },
+        valueTwo: { a: '1' },
+        expected: true,
       },
       {
         name: 'Should return true if both objects properties are arrays and these are differents',
@@ -47,13 +68,22 @@ describe('boosUpdate tests', () => {
         expected: true,
       },
       {
-        name: 'Should return true if both arrays are different', valueOne: [1, 2, 3, 4], valueTwo: [1, 3, 2, 5], expected: true,
+        name: 'Should return true if both arrays are different',
+        valueOne: [1, 2, 3, 4],
+        valueTwo: [1, 3, 2, 5],
+        expected: true,
       },
       {
-        name: 'Should return true if both arrays elements are different type', valueOne: [1, 2, 3, 4], valueTwo: ['1', '3', '2', '5'], expected: true,
+        name: 'Should return true if both arrays elements are different type',
+        valueOne: [1, 2, 3, 4],
+        valueTwo: ['1', '3', '2', '5'],
+        expected: true,
       },
       {
-        name: 'Should return true if both arrays contains different value', valueOne: [{ a: 1 }], valueTwo: [{ a: 5, b: 4 }], expected: true,
+        name: 'Should return true if both arrays contains different value',
+        valueOne: [{ a: 1 }],
+        valueTwo: [{ a: 5, b: 4 }],
+        expected: true,
       },
       {
         name: 'Should return true if both arrays contains different shapes and values',
@@ -69,16 +99,28 @@ describe('boosUpdate tests', () => {
       },
       // Expected not to change
       {
-        name: 'Should return false if both numbers are equal', valueOne: 1, valueTwo: 1, expected: false,
+        name: 'Should return false if both numbers are equal',
+        valueOne: 1,
+        valueTwo: 1,
+        expected: false,
       },
       {
-        name: 'Should return false if both booleans are equal', valueOne: true, valueTwo: true, expected: false,
+        name: 'Should return false if both booleans are equal',
+        valueOne: true,
+        valueTwo: true,
+        expected: false,
       },
       {
-        name: 'Should return false if both strings are equal', valueOne: 'Value one', valueTwo: 'Value one', expected: false,
+        name: 'Should return false if both strings are equal',
+        valueOne: 'Value one',
+        valueTwo: 'Value one',
+        expected: false,
       },
       {
-        name: 'Should return false if both objects are equal', valueOne: { a: 1 }, valueTwo: { a: 1 }, expected: false,
+        name: 'Should return false if both objects are equal',
+        valueOne: { a: 1 },
+        valueTwo: { a: 1 },
+        expected: false,
       },
       {
         name: 'Should return false if both objects are equal in shape and values',
@@ -146,7 +188,7 @@ describe('boosUpdate tests', () => {
     });
 
     test('Should not returns the value from memory at first given any forwaded parameters', () => {
-      const memoizedSum = memoizeFunction((a: {a: Array<number>}, b: {a: Array<number>}) => {
+      const memoizedSum = memoizeFunction((a: { a: Array<number> }, b: { a: Array<number> }) => {
         const aSum = a.a.reduce((acc, num) => acc + num, 0);
         const bSum = b.a.reduce((acc, num) => acc + num, 0);
         return aSum + bSum;

@@ -1,12 +1,10 @@
-export type ArgumentTypes<Func extends Function> = Func extends (...args: infer A) => any
-  ? A
-  : never;
+export type ArgumentTypes<Func extends Function> = Func extends (...args: infer A) => any ? A : never;
 
-export type ResultType<Func extends Function> = Func extends (...args: any) => any
-  ? ReturnType<Func>
-  : never;
+export type ResultType<Func extends Function> = Func extends (...args: any) => any ? ReturnType<Func> : never;
 
-export type MemoizedFunction<Func extends Function> = (...parameters: ArgumentTypes<Func>) => {
+export type MemoizedFunction<Func extends Function> = (
+  ...parameters: ArgumentTypes<Func>
+) => {
   fromMemory: boolean;
   result: ResultType<Func>;
 };
