@@ -1,13 +1,12 @@
 import { logValueChanges } from './logger';
 
-
 let consoleLog: jest.SpyInstance;
 let consoleGroupSpy: jest.SpyInstance;
 
 beforeAll(() => {
   consoleLog = jest.spyOn(global.console, 'log').mockImplementation();
-  consoleGroupSpy =  jest.spyOn(global.console, 'group').mockImplementation();
-})
+  consoleGroupSpy = jest.spyOn(global.console, 'group').mockImplementation();
+});
 
 afterEach(() => {
   jest.clearAllMocks();

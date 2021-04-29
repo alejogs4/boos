@@ -3,12 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'plugin:prettier/recommended'],
   settings: {
     'import/resolver': {
       node: {
@@ -24,16 +19,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   overrides: [
     {
-      files: [
-        '**/*.test.ts',
-        '**/*.test.tsx',
-      ],
+      files: ['**/*.test.ts', '**/*.test.tsx'],
       env: {
         jest: true,
       },
@@ -43,6 +32,7 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
     'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off',
     'import/extensions': [
       'error',
       {
