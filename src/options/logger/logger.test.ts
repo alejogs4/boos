@@ -2,8 +2,6 @@ import { logValueChanges } from './logger';
 
 
 
-
-
 let consoleLog: jest.SpyInstance;
 let consoleGroupSpy: jest.SpyInstance;
 

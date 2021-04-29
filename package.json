@@ -76,5 +76,19 @@
     "transform": {
       "^.+\\.ts?$": "ts-jest"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.(ts|tsx)": [
+      "npm run lint"
+    ],
+    "./src/**/*.{js,ts,tsx}": [
+      "npm run format",
+      "git add"
+    ]
   }
 }

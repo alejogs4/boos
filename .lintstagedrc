@@ -1,9 +1,0 @@
-{
-  "*.+(ts|tsx)": [
-    "npm run lint"
-  ],
-  "./src/**/*.{js,ts,tsx}": [
-    "npm run format",
-    "git add"
-  ]
-}
