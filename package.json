@@ -13,7 +13,9 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage --watchAll=false",
     "lint": "eslint './src/**/*{.js,.jsx,.ts,.tsx}' --quiet --fix",
-    "format": "prettier --write './src/**/*.{js,ts,tsx}'"
+    "lint:commit": "lint-staged",
+    "format": "prettier --write './src/**/*.{js,ts,tsx}'",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -74,11 +76,6 @@
     },
     "transform": {
       "^.+\\.ts?$": "ts-jest"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'OE' && lint-staged"
     }
   },
   "lint-staged": {
