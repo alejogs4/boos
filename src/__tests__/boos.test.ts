@@ -29,7 +29,7 @@ describe('Boos tests', () => {
       state.number += 1;
     });
 
-    expect(subsOne).toHaveBeenCalledTimes(1);
+    expect(subsOne).toHaveBeenCalledTimes(2);
     expect(subsTwo).toHaveBeenCalledTimes(2);
 
     boos.unsubscribe(subsTwo);
