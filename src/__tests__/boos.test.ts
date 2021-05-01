@@ -15,9 +15,12 @@ describe('Boos tests', () => {
     expect(subsOne).toHaveBeenCalledTimes(1);
 
     boos.subscribe(subsTwo);
-    boos.modifyValue((state) => {
+
+    function sum(state: { number: number }) {
       state.number += 1;
-    });
+    }
+
+    boos.modifyValue((state) => sum(state));
 
     expect(subsOne).toHaveBeenCalledTimes(2);
     expect(subsTwo).toHaveBeenCalledTimes(1);
@@ -25,9 +28,7 @@ describe('Boos tests', () => {
     expect(subsTwo).toHaveBeenCalledWith({ number: 3 });
 
     boos.unsubscribe(subsOne);
-    boos.modifyValue((state) => {
-      state.number += 1;
-    });
+    boos.modifyValue((state) => sum(state));
 
     expect(subsOne).toHaveBeenCalledTimes(2);
     expect(subsTwo).toHaveBeenCalledTimes(2);
