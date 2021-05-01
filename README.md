@@ -2,6 +2,16 @@
 
 Boos is React state management made simple, it makes use of the old fashioned [observer pattern](https://refactoring.guru/design-patterns/observer) and React hooks to access and update state across the application.
 
+## Installation
+```bash
+# using npm
+npm install boos --save
+
+# using yarn
+yarn add boos
+```
+It's important to point out that React it's a boos peer dependency so it's necessary to have it installed in your project
+
 ## What is it a boos?
 Boos stands for Boring observer because under the hood that's all that really is, and object that fits with the observer pattern
 
